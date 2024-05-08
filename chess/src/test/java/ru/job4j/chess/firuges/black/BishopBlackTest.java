@@ -35,7 +35,7 @@ class BishopBlackTest {
     void whenWayThenCellDotG5() {
         BishopBlack figureBBlack = new BishopBlack(Cell.C1);
         Cell[] output = figureBBlack.way(Cell.G5);
-        Cell[] expected = { Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertThat(output).isEqualTo(expected);
     }
 
