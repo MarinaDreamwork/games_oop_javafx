@@ -20,11 +20,10 @@ public final class Logic {
         figures[index] = figures[index].copy(dest);
     }
 
-    private boolean free(Cell[] steps) throws OccupiedCellException, FigureNotFoundException {
-
-        for (int i = 0; i < figures.length; i++) {
-            for (int j = 0; j < steps.length; j++) {
-                if (figures[i].position() == steps[j]) {
+    private boolean free(Cell[] steps) throws OccupiedCellException {
+        for (Figure figure : figures) {
+            for (Cell step : steps) {
+                if (figure.position().equals(step)) {
                     throw new OccupiedCellException("The place is occupied!");
                 }
             }
